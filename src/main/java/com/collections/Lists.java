@@ -24,9 +24,14 @@ public class Lists {
     }
 
     public static int put(String blue, List<String> colors1) {
+        int count = 0;
         for (int i = 0; i < colors1.size(); i++)
-            if (colors1.get(i).isEmpty()) colors1.set(i, blue);
-        return -1;
+            if (colors1.get(i).isEmpty())
+            {
+                colors1.set(i, blue);
+                count += 1;
+            }
+        return count <= 0 ? -1 : count;
     }
 
     public static int remove(String black, List<String> colors1) {

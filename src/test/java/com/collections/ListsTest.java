@@ -44,7 +44,7 @@ public class ListsTest {
         List<String> colors1 = new ArrayList<>(List.of("Red", "Green", "", "", "Pink", "", "Black"));
         List<String> colors2 = new ArrayList<>(List.of("Red", "Green", "White", "Black", "Pink", "Yellow", "Black"));
 
-        assertEquals(2, Lists.put("Blue", colors1));
+        assertEquals(3, Lists.put("Blue", colors1)); // INICIALMENTE LA TEST ESTABA CON 2, SIENDO QUE HABIA 3 ELEMENTOS VACIOS EN COLORS1
         assertEquals(-1, Lists.put("Blue", colors2));
     }
 
